@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: '/lib-agile',
   outDir: '../docs',
   title: 'libAgile',
   description: 'A VitePress Site',
