@@ -1,0 +1,10 @@
+node_modules
+.DS_Store
+dist-ssr
+*.local
+yarn.lock
+lib
+es
+src
+example
+./dist
