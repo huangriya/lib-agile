@@ -52,7 +52,7 @@ export default defineConfig({
         { text: '正则篇', link: '/function/regex' },
         { text: '其他', link: '/function/other' },
       ],
-      '/components/': [
+      '/components/vue': [
         { text: '滚动条', link: '/components/vue/scrollBar' },
         {
           text: '均分网格',
@@ -62,6 +62,9 @@ export default defineConfig({
           text: '三栏布局',
           link: '/components/vue/column',
         },
+      ],
+      '/components/react': [
+        { text: '滚动条', link: '/components/react/scrollBar' },
       ],
     },
 
