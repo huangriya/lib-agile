@@ -8,7 +8,7 @@
 
 <script setup>
   // 这个 demo1 重复了多次，复制修改的时候容易漏掉
-  import scrollBar from '../../src/components/scrollBar/index.vue'
+  import scrollBar from '../../../src/components/scrollBar/index.vue'
 </script>
 
 <scrollBar style="border:solid #eee 1px;height:300px">
@@ -90,15 +90,14 @@
 
 ### props
 
-| 参数         | 说明                                                                   | 类型    | 默认值 |
-| ------------ | ---------------------------------------------------------------------- | ------- | ------ |
-| type         | 滚动类型。可选值为：show hover hide                                    | string  | hover  |
-| minBarSize   | 滚动条最小尺寸，x 轴滚动时宽度不小于这个值，y 轴滚动时高度不小于这个值 | number  | 50     |
-| offsetLeft   | x 轴滚动条左边偏移量                                                   | number  | 0      |
-| offsetRight  | x 轴滚动条右边偏移量                                                   | number  | 10     |
-| offsetTop    | y 轴滚动条上边偏移量                                                   | number  | 0      |
-| offsetBottom | y 轴滚动条下边偏移量                                                   | number  | 10     |
-| isAutoUpdate | 容器内内容变更是否自动更新滚动条                                       | Boolean | true   |
+| 参数         | 说明                                                                   | 类型   | 默认值 |
+| ------------ | ---------------------------------------------------------------------- | ------ | ------ |
+| type         | 滚动类型。可选值为：show hover hide                                    | string | hover  |
+| minBarSize   | 滚动条最小尺寸，x 轴滚动时宽度不小于这个值，y 轴滚动时高度不小于这个值 | number | 50     |
+| offsetLeft   | x 轴滚动条左边偏移量                                                   | number | 0      |
+| offsetRight  | x 轴滚动条右边偏移量                                                   | number | 10     |
+| offsetTop    | y 轴滚动条上边偏移量                                                   | number | 0      |
+| offsetBottom | y 轴滚动条下边偏移量                                                   | number | 10     |
 
 ### 事件
 
@@ -108,8 +107,8 @@
 
 ### 方法
 
-| 方法名称      | 说明                                                               | 参数                       |
-| ------------- | ------------------------------------------------------------------ | -------------------------- |
-| updated       | isAutoUpdate 等于 false 时，容器内容变更后可以手动触发滚动组件更新 | updated()                  |
-| setScrollLeft | 手动设置 x 轴滚动位置                                              | setScrollLeft(num: number) |
-| setScrollTop  | 手动设置 y 轴滚动位置                                              | setScrollTop(num: number)  |
+| 方法名称      | 说明                                                    | 参数                       |
+| ------------- | ------------------------------------------------------- | -------------------------- |
+| updated       | 手动更改 dom 后，容器内容变更后可以手动触发滚动组件更新 | updated()                  |
+| setScrollLeft | 手动设置 x 轴滚动位置                                   | setScrollLeft(num: number) |
+| setScrollTop  | 手动设置 y 轴滚动位置                                   | setScrollTop(num: number)  |

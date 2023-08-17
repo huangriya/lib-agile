@@ -1,6 +1,6 @@
 # html 相关
 
-## 从下往上遍历元素
+## 遍历 dom 树
 
 ```javascript
 import { elementForEach } from 'lib-agile'

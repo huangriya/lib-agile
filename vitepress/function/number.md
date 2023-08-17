@@ -2,18 +2,29 @@
 
 ## 随机数
 
-获取区间内随机数
+获取区间内随机数，
 
 ```javascript
 import { random } from 'lib-agile'
 
+// 生成0到10之间的随机数
 random(0, 10) // => 3
+
+// 生成0到10之间的随机数
+random(100) // => 76
+
+// 生成0到10之间的随机数，并保留两位小数
+random(0, 10, 2) // => 3.23
 ```
 
 ## 数字千分位
+
+数字转换成货币格式
 
 ```javascript
 import { toCurrency } from 'lib-agile'
 
 toCurrency(10000) // => 100,00
+
+toCurrency(10000.89) // => 100,00.89
 ```

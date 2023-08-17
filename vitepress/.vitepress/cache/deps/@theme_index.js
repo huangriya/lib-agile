@@ -9,28 +9,28 @@ import {
   watchEffect
 } from "./chunk-EGLDFMJ2.js";
 
-// node_modules/.pnpm/vitepress@1.0.0-rc.2_less@4.1.3/node_modules/vitepress/dist/client/theme-default/index.js
-import "/Users/hry/code/myProject/lib-agile/node_modules/.pnpm/vitepress@1.0.0-rc.2_less@4.1.3/node_modules/vitepress/dist/client/theme-default/styles/fonts.css";
+// node_modules/.pnpm/vitepress@1.0.0-rc.2_fdb7e3c9f57c3e321aecf58f42f13727/node_modules/vitepress/dist/client/theme-default/index.js
+import "/Users/hry/code/myProject/lib-agile/node_modules/.pnpm/vitepress@1.0.0-rc.2_fdb7e3c9f57c3e321aecf58f42f13727/node_modules/vitepress/dist/client/theme-default/styles/fonts.css";
 
-// node_modules/.pnpm/vitepress@1.0.0-rc.2_less@4.1.3/node_modules/vitepress/dist/client/theme-default/without-fonts.js
-import "/Users/hry/code/myProject/lib-agile/node_modules/.pnpm/vitepress@1.0.0-rc.2_less@4.1.3/node_modules/vitepress/dist/client/theme-default/styles/vars.css";
-import "/Users/hry/code/myProject/lib-agile/node_modules/.pnpm/vitepress@1.0.0-rc.2_less@4.1.3/node_modules/vitepress/dist/client/theme-default/styles/base.css";
-import "/Users/hry/code/myProject/lib-agile/node_modules/.pnpm/vitepress@1.0.0-rc.2_less@4.1.3/node_modules/vitepress/dist/client/theme-default/styles/utils.css";
-import "/Users/hry/code/myProject/lib-agile/node_modules/.pnpm/vitepress@1.0.0-rc.2_less@4.1.3/node_modules/vitepress/dist/client/theme-default/styles/components/custom-block.css";
-import "/Users/hry/code/myProject/lib-agile/node_modules/.pnpm/vitepress@1.0.0-rc.2_less@4.1.3/node_modules/vitepress/dist/client/theme-default/styles/components/vp-code.css";
-import "/Users/hry/code/myProject/lib-agile/node_modules/.pnpm/vitepress@1.0.0-rc.2_less@4.1.3/node_modules/vitepress/dist/client/theme-default/styles/components/vp-code-group.css";
-import "/Users/hry/code/myProject/lib-agile/node_modules/.pnpm/vitepress@1.0.0-rc.2_less@4.1.3/node_modules/vitepress/dist/client/theme-default/styles/components/vp-doc.css";
-import "/Users/hry/code/myProject/lib-agile/node_modules/.pnpm/vitepress@1.0.0-rc.2_less@4.1.3/node_modules/vitepress/dist/client/theme-default/styles/components/vp-sponsor.css";
-import VPBadge from "/Users/hry/code/myProject/lib-agile/node_modules/.pnpm/vitepress@1.0.0-rc.2_less@4.1.3/node_modules/vitepress/dist/client/theme-default/components/VPBadge.vue";
-import Layout from "/Users/hry/code/myProject/lib-agile/node_modules/.pnpm/vitepress@1.0.0-rc.2_less@4.1.3/node_modules/vitepress/dist/client/theme-default/Layout.vue";
-import { default as default2 } from "/Users/hry/code/myProject/lib-agile/node_modules/.pnpm/vitepress@1.0.0-rc.2_less@4.1.3/node_modules/vitepress/dist/client/theme-default/components/VPHomeHero.vue";
-import { default as default3 } from "/Users/hry/code/myProject/lib-agile/node_modules/.pnpm/vitepress@1.0.0-rc.2_less@4.1.3/node_modules/vitepress/dist/client/theme-default/components/VPHomeFeatures.vue";
-import { default as default4 } from "/Users/hry/code/myProject/lib-agile/node_modules/.pnpm/vitepress@1.0.0-rc.2_less@4.1.3/node_modules/vitepress/dist/client/theme-default/components/VPHomeSponsors.vue";
-import { default as default5 } from "/Users/hry/code/myProject/lib-agile/node_modules/.pnpm/vitepress@1.0.0-rc.2_less@4.1.3/node_modules/vitepress/dist/client/theme-default/components/VPDocAsideSponsors.vue";
-import { default as default6 } from "/Users/hry/code/myProject/lib-agile/node_modules/.pnpm/vitepress@1.0.0-rc.2_less@4.1.3/node_modules/vitepress/dist/client/theme-default/components/VPTeamPage.vue";
-import { default as default7 } from "/Users/hry/code/myProject/lib-agile/node_modules/.pnpm/vitepress@1.0.0-rc.2_less@4.1.3/node_modules/vitepress/dist/client/theme-default/components/VPTeamPageTitle.vue";
-import { default as default8 } from "/Users/hry/code/myProject/lib-agile/node_modules/.pnpm/vitepress@1.0.0-rc.2_less@4.1.3/node_modules/vitepress/dist/client/theme-default/components/VPTeamPageSection.vue";
-import { default as default9 } from "/Users/hry/code/myProject/lib-agile/node_modules/.pnpm/vitepress@1.0.0-rc.2_less@4.1.3/node_modules/vitepress/dist/client/theme-default/components/VPTeamMembers.vue";
+// node_modules/.pnpm/vitepress@1.0.0-rc.2_fdb7e3c9f57c3e321aecf58f42f13727/node_modules/vitepress/dist/client/theme-default/without-fonts.js
+import "/Users/hry/code/myProject/lib-agile/node_modules/.pnpm/vitepress@1.0.0-rc.2_fdb7e3c9f57c3e321aecf58f42f13727/node_modules/vitepress/dist/client/theme-default/styles/vars.css";
+import "/Users/hry/code/myProject/lib-agile/node_modules/.pnpm/vitepress@1.0.0-rc.2_fdb7e3c9f57c3e321aecf58f42f13727/node_modules/vitepress/dist/client/theme-default/styles/base.css";
+import "/Users/hry/code/myProject/lib-agile/node_modules/.pnpm/vitepress@1.0.0-rc.2_fdb7e3c9f57c3e321aecf58f42f13727/node_modules/vitepress/dist/client/theme-default/styles/utils.css";
+import "/Users/hry/code/myProject/lib-agile/node_modules/.pnpm/vitepress@1.0.0-rc.2_fdb7e3c9f57c3e321aecf58f42f13727/node_modules/vitepress/dist/client/theme-default/styles/components/custom-block.css";
+import "/Users/hry/code/myProject/lib-agile/node_modules/.pnpm/vitepress@1.0.0-rc.2_fdb7e3c9f57c3e321aecf58f42f13727/node_modules/vitepress/dist/client/theme-default/styles/components/vp-code.css";
+import "/Users/hry/code/myProject/lib-agile/node_modules/.pnpm/vitepress@1.0.0-rc.2_fdb7e3c9f57c3e321aecf58f42f13727/node_modules/vitepress/dist/client/theme-default/styles/components/vp-code-group.css";
+import "/Users/hry/code/myProject/lib-agile/node_modules/.pnpm/vitepress@1.0.0-rc.2_fdb7e3c9f57c3e321aecf58f42f13727/node_modules/vitepress/dist/client/theme-default/styles/components/vp-doc.css";
+import "/Users/hry/code/myProject/lib-agile/node_modules/.pnpm/vitepress@1.0.0-rc.2_fdb7e3c9f57c3e321aecf58f42f13727/node_modules/vitepress/dist/client/theme-default/styles/components/vp-sponsor.css";
+import VPBadge from "/Users/hry/code/myProject/lib-agile/node_modules/.pnpm/vitepress@1.0.0-rc.2_fdb7e3c9f57c3e321aecf58f42f13727/node_modules/vitepress/dist/client/theme-default/components/VPBadge.vue";
+import Layout from "/Users/hry/code/myProject/lib-agile/node_modules/.pnpm/vitepress@1.0.0-rc.2_fdb7e3c9f57c3e321aecf58f42f13727/node_modules/vitepress/dist/client/theme-default/Layout.vue";
+import { default as default2 } from "/Users/hry/code/myProject/lib-agile/node_modules/.pnpm/vitepress@1.0.0-rc.2_fdb7e3c9f57c3e321aecf58f42f13727/node_modules/vitepress/dist/client/theme-default/components/VPHomeHero.vue";
+import { default as default3 } from "/Users/hry/code/myProject/lib-agile/node_modules/.pnpm/vitepress@1.0.0-rc.2_fdb7e3c9f57c3e321aecf58f42f13727/node_modules/vitepress/dist/client/theme-default/components/VPHomeFeatures.vue";
+import { default as default4 } from "/Users/hry/code/myProject/lib-agile/node_modules/.pnpm/vitepress@1.0.0-rc.2_fdb7e3c9f57c3e321aecf58f42f13727/node_modules/vitepress/dist/client/theme-default/components/VPHomeSponsors.vue";
+import { default as default5 } from "/Users/hry/code/myProject/lib-agile/node_modules/.pnpm/vitepress@1.0.0-rc.2_fdb7e3c9f57c3e321aecf58f42f13727/node_modules/vitepress/dist/client/theme-default/components/VPDocAsideSponsors.vue";
+import { default as default6 } from "/Users/hry/code/myProject/lib-agile/node_modules/.pnpm/vitepress@1.0.0-rc.2_fdb7e3c9f57c3e321aecf58f42f13727/node_modules/vitepress/dist/client/theme-default/components/VPTeamPage.vue";
+import { default as default7 } from "/Users/hry/code/myProject/lib-agile/node_modules/.pnpm/vitepress@1.0.0-rc.2_fdb7e3c9f57c3e321aecf58f42f13727/node_modules/vitepress/dist/client/theme-default/components/VPTeamPageTitle.vue";
+import { default as default8 } from "/Users/hry/code/myProject/lib-agile/node_modules/.pnpm/vitepress@1.0.0-rc.2_fdb7e3c9f57c3e321aecf58f42f13727/node_modules/vitepress/dist/client/theme-default/components/VPTeamPageSection.vue";
+import { default as default9 } from "/Users/hry/code/myProject/lib-agile/node_modules/.pnpm/vitepress@1.0.0-rc.2_fdb7e3c9f57c3e321aecf58f42f13727/node_modules/vitepress/dist/client/theme-default/components/VPTeamMembers.vue";
 
 // node_modules/.pnpm/@vueuse+shared@10.3.0_vue@3.3.4/node_modules/@vueuse/shared/index.mjs
 function tryOnScopeDispose(fn) {
@@ -181,25 +181,25 @@ var _TransitionPresets = {
 };
 var TransitionPresets = Object.assign({}, { linear: identity }, _TransitionPresets);
 
-// node_modules/.pnpm/vitepress@1.0.0-rc.2_less@4.1.3/node_modules/vitepress/dist/client/theme-default/composables/sidebar.js
+// node_modules/.pnpm/vitepress@1.0.0-rc.2_fdb7e3c9f57c3e321aecf58f42f13727/node_modules/vitepress/dist/client/theme-default/composables/sidebar.js
 import { useRoute } from "vitepress";
 
-// node_modules/.pnpm/vitepress@1.0.0-rc.2_less@4.1.3/node_modules/vitepress/dist/client/shared.js
+// node_modules/.pnpm/vitepress@1.0.0-rc.2_fdb7e3c9f57c3e321aecf58f42f13727/node_modules/vitepress/dist/client/shared.js
 var inBrowser = typeof document !== "undefined";
 
-// node_modules/.pnpm/vitepress@1.0.0-rc.2_less@4.1.3/node_modules/vitepress/dist/client/theme-default/support/utils.js
+// node_modules/.pnpm/vitepress@1.0.0-rc.2_fdb7e3c9f57c3e321aecf58f42f13727/node_modules/vitepress/dist/client/theme-default/support/utils.js
 import { withBase } from "vitepress";
 
-// node_modules/.pnpm/vitepress@1.0.0-rc.2_less@4.1.3/node_modules/vitepress/dist/client/theme-default/composables/data.js
+// node_modules/.pnpm/vitepress@1.0.0-rc.2_fdb7e3c9f57c3e321aecf58f42f13727/node_modules/vitepress/dist/client/theme-default/composables/data.js
 import { useData as useData$ } from "vitepress";
 var useData = useData$;
 
-// node_modules/.pnpm/vitepress@1.0.0-rc.2_less@4.1.3/node_modules/vitepress/dist/client/theme-default/support/utils.js
+// node_modules/.pnpm/vitepress@1.0.0-rc.2_fdb7e3c9f57c3e321aecf58f42f13727/node_modules/vitepress/dist/client/theme-default/support/utils.js
 function ensureStartingSlash(path) {
   return /^\//.test(path) ? path : `/${path}`;
 }
 
-// node_modules/.pnpm/vitepress@1.0.0-rc.2_less@4.1.3/node_modules/vitepress/dist/client/theme-default/support/sidebar.js
+// node_modules/.pnpm/vitepress@1.0.0-rc.2_fdb7e3c9f57c3e321aecf58f42f13727/node_modules/vitepress/dist/client/theme-default/support/sidebar.js
 function getSidebar(_sidebar, path) {
   if (Array.isArray(_sidebar))
     return _sidebar;
@@ -230,7 +230,7 @@ function getSidebarGroups(sidebar) {
   return groups;
 }
 
-// node_modules/.pnpm/vitepress@1.0.0-rc.2_less@4.1.3/node_modules/vitepress/dist/client/theme-default/composables/sidebar.js
+// node_modules/.pnpm/vitepress@1.0.0-rc.2_fdb7e3c9f57c3e321aecf58f42f13727/node_modules/vitepress/dist/client/theme-default/composables/sidebar.js
 function useSidebar() {
   const route = useRoute();
   const { theme: theme2, frontmatter } = useData();
@@ -289,7 +289,7 @@ if (inBrowser) {
   });
 }
 
-// node_modules/.pnpm/vitepress@1.0.0-rc.2_less@4.1.3/node_modules/vitepress/dist/client/theme-default/without-fonts.js
+// node_modules/.pnpm/vitepress@1.0.0-rc.2_fdb7e3c9f57c3e321aecf58f42f13727/node_modules/vitepress/dist/client/theme-default/without-fonts.js
 var theme = {
   Layout,
   enhanceApp: ({ app }) => {

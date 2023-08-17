@@ -10,7 +10,7 @@ import { depthForEach } from 'lib-agile'
 // 示例数据
 const arr = [
   {
-    id: 1
+    id: 1,
     name: 'a',
     children: [
       {
@@ -19,11 +19,11 @@ const arr = [
       },
     ],
   },{
-    id: 101
+    id: 101,
     name: 'b',
     children: [
       {
-        id: 102
+        id: 102,
         name: 'ba',
       },
     ],
@@ -71,7 +71,7 @@ const arr = [
   },
 ]
 
-breadthForEach(arr, (item, parentItem, level) => {
+breadthForEach(arr, (item, parentItem) => {
   console.log(item.name)
 })
 // =>
@@ -141,7 +141,7 @@ find(arr, (item) => item.name === 'd') // 只需循环一次就找到了
 
 ## 随机算法
 
-把数组中的值随机排列，该算法由 Fisher 和 Yates 创造。
+把数组中的项随机排列，该算法由 Fisher 和 Yates 创造。
 
 ```javascript
 import { shuffle } from 'lib-agile'

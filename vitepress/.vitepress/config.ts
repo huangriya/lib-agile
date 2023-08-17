@@ -14,8 +14,18 @@ export default defineConfig({
       { text: '函数', link: '/function/algorithm', activeMatch: '/function/' },
       {
         text: '组件',
-        link: '/components/scrollBar',
-        activeMatch: '/components/',
+        items: [
+          {
+            text: 'vue3组件',
+            link: '/components/vue/scrollBar',
+            activeMatch: '/components/vue',
+          },
+          {
+            text: 'react组件',
+            link: '/components/react/scrollBar',
+            activeMatch: '/components/react',
+          },
+        ],
       },
     ],
 
@@ -42,7 +52,17 @@ export default defineConfig({
         { text: '正则篇', link: '/function/regex' },
         { text: '其他', link: '/function/other' },
       ],
-      '/components/': [{ text: '滚动条', link: '/components/scrollBar' }],
+      '/components/': [
+        { text: '滚动条', link: '/components/vue/scrollBar' },
+        {
+          text: '均分网格',
+          link: '/components/vue/avGrid',
+        },
+        {
+          text: '三栏布局',
+          link: '/components/vue/column',
+        },
+      ],
     },
 
     socialLinks: [

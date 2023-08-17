@@ -4,12 +4,15 @@ import { resolve } from 'path'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import path from 'path'
 import { buildPlugin } from 'vite-plugin-build'
+import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    vue(),
-    vueJsx(),
+    vue({
+      exclude: [/\.jsx$/],
+    }),
+    react(),
     buildPlugin({
       fileBuild: {
         emitDeclaration: true,
@@ -17,8 +20,8 @@ export default defineConfig({
       libBuild: {
         buildOptions: {
           rollupOptions: {
-            external: ['vue'],
-            output: { globals: { vue: 'Vue' } },
+            external: ['vue', 'react'],
+            output: { globals: { vue: 'Vue', react: 'React' } },
           },
           lib: {
             entry: path.resolve(__dirname, 'src/index.ts'),
@@ -29,7 +32,7 @@ export default defineConfig({
     }),
   ],
   resolve: {
-    dedupe: ['vue'],
+    dedupe: ['vue', 'react'],
     alias: {
       '@': path.join(__dirname, './src'),
     },
