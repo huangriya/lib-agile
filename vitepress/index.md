@@ -10,9 +10,6 @@ hero:
     - theme: brand
       text: 立即体验
       link: /function/algorithm
-    - theme: alt
-      text: API Examples
-      link: /api-examples
 
 features:
   - title: 工具类
