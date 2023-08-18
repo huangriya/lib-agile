@@ -14,6 +14,7 @@ export default defineConfig({
       { text: '函数', link: '/function/algorithm', activeMatch: '/function/' },
       {
         text: '组件',
+        activeMatch: '/components',
         items: [
           {
             text: 'vue3组件',

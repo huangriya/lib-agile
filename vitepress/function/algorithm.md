@@ -141,7 +141,7 @@ find(arr, (item) => item.name === 'd') // 只需循环一次就找到了
 
 ## 随机算法
 
-把数组中的项随机排列，该算法由 Fisher 和 Yates 创造。
+又称为洗牌算法，把数组中的项随机排列，该算法由 Fisher 和 Yates 创造；时间复杂度为 O(n)
 
 ```javascript
 import { shuffle } from 'lib-agile'

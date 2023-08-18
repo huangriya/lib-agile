@@ -26,7 +26,8 @@
 </template>
 
 <script setup>
-  import scrollBar from '../../src/components/scrollBar/index.vue'
+  import scrollBar from 'lib-agile/es/components/scrollBar/index.vue.js'
+  import 'lib-agile/es/components/scrollBar/index.css'
 </script>
 ```
 
@@ -51,7 +52,8 @@
 </template>
 
 <script setup>
-  import scrollBar from '../../src/components/scrollBar/index.vue'
+  import scrollBar from 'lib-agile/es/components/scrollBar/index.vue.js'
+  import 'lib-agile/es/components/scrollBar/index.css'
 </script>
 ```
 
@@ -80,7 +82,8 @@
 </template>
 
 <script setup>
-  import scrollBar from '../../src/components/scrollBar/index.vue'
+  import scrollBar from 'lib-agile/es/components/scrollBar/index.vue.js'
+  import 'lib-agile/es/components/scrollBar/index.css'
 </script>
 ```
 

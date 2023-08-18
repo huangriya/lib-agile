@@ -18,16 +18,22 @@
 <details>
   <summary>查看代码</summary>
 
-```vue{4}
-<template>
-  <scrollBar style="border:solid #eee 1px;height:300px">
-    <div style="width: 1500px;height: 400px;padding:10px">占位内容</div>
-  </scrollBar>
-</template>
+```jsx{4}
 
-<script setup>
-  import scrollBar from '../../src/components/scrollBar/index.vue'
-</script>
+import ScrollBar from 'lib-agile/es/components/scrollBar/index.react.js'
+import 'lib-agile/es/components/scrollBar/index.css'
+
+const App = () => {
+  return (
+    <ScrollBar style={{ height: '200px' }}>
+      <div style={{ width: '1000px', height: '500px' }}>
+        asd
+      </div>
+    </ScrollBar>
+  )
+}
+
+export default App;
 ```
 
 </details>
@@ -43,16 +49,22 @@
 <details>
   <summary>查看代码</summary>
 
-```vue{4}
-<template>
-  <scrollBar type="show" style="border:solid #eee 1px;height:200px">
-    <div style="width: 1500px;padding:10px">占位内容</div>
-  </scrollBar>
-</template>
+```jsx{4}
 
-<script setup>
-  import scrollBar from '../../src/components/scrollBar/index.vue'
-</script>
+import ScrollBar from 'lib-agile/es/components/scrollBar/index.react.js'
+import 'lib-agile/es/components/scrollBar/index.css'
+
+const App = () => {
+  return (
+    <ScrollBar type={'show'} style={{ height: '200px' }}>
+      <div style={{ width: '1000px', height: '500px' }}>
+        asd
+      </div>
+    </ScrollBar>
+  )
+}
+
+export default App;
 ```
 
 </details>
@@ -69,19 +81,21 @@
 <details>
   <summary>查看代码</summary>
 
-```vue{4}
-<template>
-  <scrollBar type="show" :offsetLeft="50" :offsetRight="50" :offsetTop="50" :offsetBottom="50" style="border:solid #eee 1px;height:300px">
-    <div style="width: 1500px;height: 400px;padding:10px">
-      占位内容
-      <div style="text-align: right;">占位内容</div>
-    </div>
-  </scrollBar>
-</template>
+```jsx{4}
 
-<script setup>
-  import scrollBar from '../../src/components/scrollBar/index.vue'
-</script>
+import ScrollBar from 'lib-agile/es/components/scrollBar/index.react.js'
+import 'lib-agile/es/components/scrollBar/index.css'
+
+const App = () => {
+  return (
+    <ScrollBar offsetLeft={50} offsetRight={50} offsetTop={50} offsetBottom={50} style={{ height: '200px' }}>
+      <div style={{ width: '1000px', height: '500px' }}>
+        asd
+      </div>
+    </ScrollBar>
+  )
+}
+export default App;
 ```
 
 </details>
@@ -107,8 +121,8 @@
 
 ### 方法
 
-| 方法名称      | 说明                                                    | 参数                       |
-| ------------- | ------------------------------------------------------- | -------------------------- |
-| updated       | 手动更改 dom 后，容器内容变更后可以手动触发滚动组件更新 | updated()                  |
-| setScrollLeft | 手动设置 x 轴滚动位置                                   | setScrollLeft(num: number) |
-| setScrollTop  | 手动设置 y 轴滚动位置                                   | setScrollTop(num: number)  |
+| 方法名称      | 说明                                                                                    | 参数                       |
+| ------------- | --------------------------------------------------------------------------------------- | -------------------------- |
+| updated       | 默认情况下会监听子节点变动，但手动更改 dom 后导致的容器内容变更需要手动触发滚动组件更新 | updated()                  |
+| setScrollLeft | 手动设置 x 轴滚动位置                                                                   | setScrollLeft(num: number) |
+| setScrollTop  | 手动设置 y 轴滚动位置                                                                   | setScrollTop(num: number)  |

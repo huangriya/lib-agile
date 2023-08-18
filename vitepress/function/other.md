@@ -8,6 +8,8 @@
 import { blocked } from 'lib-agile'
 
 blocked(1000) // 阻塞程序1秒
+console.log('我会在1秒后输出')
 
 blocked(5000) // 阻塞程序5秒
+console.log('我会在5秒后输出')
 ```
