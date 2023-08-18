@@ -13,6 +13,7 @@ specifiers:
   eslint-plugin-prettier: ^4.0.0
   eslint-plugin-vue: ^9.11.0
   less: ^4.1.2
+  lib-agile: ^1.0.0-beta.2
   prettier: ^2.5.1
   react: ^18.2.0
   react-dom: ^18.2.0
@@ -29,6 +30,7 @@ dependencies:
   '@vitejs/plugin-react': 4.0.4_vite@4.0.5
   ant-design-vue: 3.2.20_vue@3.2.47
   dayjs: 1.11.9
+  lib-agile: 1.0.0-beta.2_vite@4.0.5+vue@3.2.47
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   vue-router: 4.2.4_vue@3.2.47
@@ -2490,6 +2492,22 @@ packages:
       prelude-ls: 1.2.1
       type-check: 0.4.0
     dev: true
+
+  /lib-agile/1.0.0-beta.2_vite@4.0.5+vue@3.2.47:
+    resolution: {integrity: sha512-1nTa79JC72lsKgQG+zesP2VxBtA9uoik7toXrvrISzHhUSg+0kbRmqlAka7NX3SjS6sVkqZr3/cod5OEsW5iDw==}
+    engines: {node: '>=14', npm: '>=6.10'}
+    dependencies:
+      '@vitejs/plugin-react': 4.0.4_vite@4.0.5
+      ant-design-vue: 3.2.20_vue@3.2.47
+      dayjs: 1.11.9
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      vue-router: 4.2.4_vue@3.2.47
+    transitivePeerDependencies:
+      - supports-color
+      - vite
+      - vue
+    dev: false
 
   /locate-path/6.0.0:
     resolution: {integrity: sha512-iPZK6eYjbxRu3uB4/WZ3EsEIMJFMqAoopl3R+zuq0UjcAm/MO6KCweDgPfP3elTztoKP3KtnVHxTn2NHBSDVUw==}

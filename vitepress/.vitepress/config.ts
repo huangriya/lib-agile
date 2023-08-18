@@ -5,7 +5,8 @@ export default defineConfig({
   base: '/lib-agile',
   outDir: '../docs',
   title: 'libAgile',
-  description: 'A VitePress Site',
+  description:
+    '简单方便快捷的综合库，包含工具函数、组件、样式，与第三方组件库形式优势互补。',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
