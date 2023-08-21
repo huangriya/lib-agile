@@ -42,12 +42,12 @@ export default defineConfig({
       '/function/': [
         { text: '算法篇', link: '/function/algorithm' },
         { text: '数据结构篇', link: '/function/dataStructure' },
+        { text: '性能优化篇', link: '/function/browser' },
         { text: '数组篇', link: '/function/array' },
         { text: '对象篇', link: '/function/object' },
         { text: '数字篇', link: '/function/number' },
         { text: '字符串篇', link: '/function/string' },
         { text: 'html篇', link: '/function/html' },
-        { text: '浏览器篇', link: '/function/browser' },
         { text: '日期篇', link: '/function/date' },
         { text: '类型判断', link: '/function/type' },
         { text: '平台判断', link: '/function/platform' },
