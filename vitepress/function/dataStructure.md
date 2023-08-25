@@ -84,3 +84,113 @@ stack.clear()
 ## 链表
 
 存储有序的元素集合，链表中的元素在内存中并不是连续放置的。每个元素由一个存储元素本身的节点和一个指向下一个元素的引用（也称指针或链接）组成
+
+## 一维数组转 树 结构
+
+```javascript
+import { arrToTree } from 'lib-agile'
+
+// 示例数据
+const arr = [
+  {
+    id: 1,
+    name: '1',
+  },
+  {
+    id: 11,
+    name: '1-1',
+    parentId: 1,
+  },
+  {
+    id: 12,
+    name: '1-2',
+    parentId: 1,
+  },
+]
+
+arrToTree(arr)
+
+// 输出 =>
+// [
+//   {
+//     id: 1,
+//     name: '1',
+//     children: [
+//       {
+//         id: 11,
+//         name: '1-1',
+//         parentId: 1,
+//       },
+//       {
+//         id: 12,
+//         name: '1-2',
+//         parentId: 1,
+//       },
+//     ],
+//   }
+// ]
+
+// 示例数据
+const arr = [
+  {
+    uuid: 1,
+    name: '1',
+  },
+  {
+    uuid: 11,
+    name: '1-1',
+    pid: 1,
+  },
+  {
+    uuid: 12,
+    name: '1-2',
+    pid: 1,
+  },
+]
+
+arrToTree(arr, {
+  id: 'uuid',
+  parentId: 'pid',
+  children: 'child',
+})
+
+// 输出 =>
+// [
+//   {
+//     uuid: 1,
+//     name: '1',
+//     child: [
+//       {
+//         uuid: 11,
+//         name: '1-1',
+//         pid: 1,
+//       },
+//       {
+//         uuid: 12,
+//         name: '1-2',
+//         pid: 1,
+//       },
+//     ],
+//   }
+// ]
+```
+
+## 数组转 map 结构
+
+```javascript
+import { arrToMap } from 'lib-agile'
+
+// 示例数据
+const arr = [
+  {
+    id: 1,
+    name: 'a',
+  },
+  {
+    id: 2,
+    name: 'b',
+  },
+]
+
+arrToMap(arr, 'id') // => {1: {id: 1, name: a}, 2: {id: 2}}
+```

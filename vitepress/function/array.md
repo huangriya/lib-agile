@@ -59,10 +59,12 @@ arrEq(arr, -1) // => {name: 'd'}
 arrEq(arr, 0) // => {name: 'a'}
 ```
 
-<!-- ## 数组转 map 结构
+## 删除数组指定项
+
+删除数组指定项
 
 ```javascript
-import { arrToMap } from 'lib-agile'
+import { delArrItem } from 'lib-agile'
 
 // 示例数据
 const arr = [
@@ -71,10 +73,22 @@ const arr = [
     name: 'a',
   },
   {
-    id: 2,
+    id: 1,
     name: 'b',
+  },
+  {
+    id: 1,
+    name: 'c',
+  },
+  {
+    id: 2,
+    name: 'd',
   },
 ]
 
-arrToMap(arr, 'id') // => {1: {id: 1, name: a}, 2: {id: 2}}
-``` -->
+delArrItem(arr, { id: 1 }) // => [{id: 2, name: 'd'}]
+
+delArrItem(arr, { id: 1, name: 'a' }) // => [{id: 1, name: 'b'},{id: 1, name: 'c'},{id: 2, name: 'd'}]
+
+delArrItem([1, 2, 2, 4, 5], 2) // => [1, 4, 5]
+```
