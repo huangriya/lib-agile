@@ -5,7 +5,7 @@ layout: home
 hero:
   name: 'libAgile'
   text: '简单 方便 快捷'
-  tagline: 让写代码更快一点，让bug更少一点
+  tagline: 让写代码更快，让bug更少
   actions:
     - theme: brand
       text: 立即体验
@@ -16,6 +16,8 @@ features:
     details: 开箱即用的工具类，包含算法、数据结构、数字、数组、字符串等相关实用函数
   - title: 组件
     details: 开箱即用的好用精品组件，按需引入，与其他ui组件库形成优势互补
-  - title: 样式
-    details: 敬请期待...
+  - title: 使用 TypeScript
+    details: 全量使用 TypeScript 编写，和你的 TypeScript 项目无缝衔接。
+  # - title: 样式
+  #   details: 敬请期待...
 ---

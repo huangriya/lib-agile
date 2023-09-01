@@ -1,23 +1,24 @@
 {
   "name": "lib-agile",
-  "version": "1.0.0-beta.6",
+  "version": "1.0.0-beta.11",
   "description": "简单方便快捷的综合库，包含工具函数、组件、样式，与第三方组件库形式优势互补。",
   "type": "module",
+  "main": "./dist/lib-agile.umd.js",
+  "module": "./dist/lib-agile.js",
+  "style": "./dist/style.css",
+  "types": "./es/index.d.ts",
+  "files": [
+    "dist",
+    "es",
+    "lib"
+  ],
+  "license": "MIT",
   "author": {
     "name": "huangriya",
     "url": "https://github.com/huangriya",
     "email": "huangriya@163.com"
   },
   "repository": "https://github.com/huangriya/lib-agile.git",
-  "files": [
-    "dist",
-    "es",
-    "lib"
-  ],
-  "main": "./dist/lib-agile.umd.js",
-  "module": "./dist/lib-agile.js",
-  "style": "./dist/style.css",
-  "license": "MIT",
   "scripts": {
     "clean": "rimraf lib es dist",
     "dev": "vite",
@@ -32,7 +33,7 @@
     "@vitejs/plugin-react": "^4.0.4",
     "ant-design-vue": "^3.2.17",
     "dayjs": "^1.11.9",
-    "lib-agile": "^1.0.0-beta.3",
+    "lib-agile": "^1.0.0-beta.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "vue-router": "^4.2.4"
@@ -50,7 +51,7 @@
     "prettier": "^2.5.1",
     "rimraf": "^3.0.2",
     "typescript": "^4.6.4",
-    "vite": "~4.0.1",
+    "vite": "~4.0.3",
     "vite-plugin-build": "^0.10.0",
     "vitepress": "^1.0.0-rc.2",
     "vue": "~3.2.45",

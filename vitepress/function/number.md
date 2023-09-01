@@ -28,3 +28,15 @@ toCurrency(10000) // => 100,00
 
 toCurrency(10000.89) // => 100,00.89
 ```
+
+## 数字差值
+
+计算两个数的差值
+
+```javascript
+import { diffCount } from 'lib-agile'
+
+diffCount(1000, 900) // => 100
+
+diffCount(900, 1000) // => 100
+```
