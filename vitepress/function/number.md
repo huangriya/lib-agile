@@ -40,3 +40,13 @@ diffCount(1000, 900) // => 100
 
 diffCount(900, 1000) // => 100
 ```
+
+## 判断一个数是不是奇数
+
+```javascript
+import { isOdd } from 'lib-agile'
+
+isOdd(1) // => true
+
+isOdd(2) // => false
+```

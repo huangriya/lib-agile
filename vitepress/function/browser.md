@@ -1,4 +1,4 @@
-# 浏览器相关
+# 浏览器性能相关
 
 ## 同步任务转异步任务，交给浏览器去调度
 
@@ -22,4 +22,22 @@ scheduling.done(() => {
 
 // 如果没执行完成就要离开了，可以清除任务
 scheduling.clear()
+```
+
+## 执行耗时任务
+
+执行耗时任务，最大限度的不阻塞浏览器渲染
+
+```javascript
+import { runTask } from 'lib-agile'
+
+for (let i = 0; i <= 10000; i++) {
+  runTask(() => {
+    console.log(i)
+  }).then(() => {
+    if (i === 100000) {
+      console.log('done')
+    }
+  })
+}
 ```
