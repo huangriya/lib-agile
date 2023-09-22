@@ -33,3 +33,12 @@
   <div style="background:#ddd">自适应宽度</div>
   </template>
 </column>
+
+## api
+
+### props
+
+| 参数     | 说明                                 | 类型    | 默认值 |
+| -------- | ------------------------------------ | ------- | ------ |
+| align    | 对齐方式。可选值为：start center end | string  | start  |
+| vertical | 垂直排列                             | Boolean | false  |

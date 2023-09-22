@@ -1,6 +1,6 @@
 {
   "name": "lib-agile",
-  "version": "1.0.0-beta.12",
+  "version": "1.0.0-beta.15",
   "description": "简单方便快捷的综合库，包含工具函数、组件、样式，与第三方组件库形式优势互补。",
   "type": "module",
   "main": "./dist/lib-agile.umd.js",

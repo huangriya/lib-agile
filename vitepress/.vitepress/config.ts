@@ -64,6 +64,10 @@ export default defineConfig({
           text: '三栏布局',
           link: '/components/vue/column',
         },
+        {
+          text: '颜色选择器',
+          link: '/components/vue/colorPicker',
+        },
       ],
       '/components/react': [
         { text: '滚动条', link: '/components/react/scrollBar' },

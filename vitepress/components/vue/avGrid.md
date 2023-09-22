@@ -11,3 +11,13 @@
 <!-- <avGrid :num="10">
   <div class="item" v-for="item in 20">1</div>
 </avGrid> -->
+
+## api
+
+### props
+
+| 参数   | 说明                                 | 类型          | 默认值 |
+| ------ | ------------------------------------ | ------------- | ------ |
+| num    | 等分成多少份                         | Number        | 1      |
+| align  | 对齐方式。可选值为：start center end | string        | start  |
+| gutter | 边距                                 | Number, Array | -      |
