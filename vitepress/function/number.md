@@ -39,6 +39,33 @@ toCurrency(10000.89) // => 100,00.89
 toCurrency(10000.893, 2) // => 100,00.89
 ```
 
+## 数字百分比
+
+数字转换成百分比格式
+
+```javascript
+/**
+ * @param num 要处理的数字
+ * @param option.digits 保留几位小数
+ * @param option.isIntegerSet 整数是否处理小数逻辑
+ * @param option.isRide100 是否乘以100
+ */
+
+import { toPercent } from 'lib-agile'
+
+toPercent(0.01) // => 1%
+
+toPercent(0.1111) // => 11.11%
+
+toCurrency(10, {
+  isRide100: true,
+}) // => 10%
+
+toCurrency(0.22, {
+  isIntegerSet: true,
+}) // => 22.00%
+```
+
 ## 数字差值
 
 计算两个数的差值
