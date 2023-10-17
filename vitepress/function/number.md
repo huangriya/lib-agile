@@ -22,11 +22,21 @@ random(0, 10, 2) // => 3.23
 数字转换成货币格式
 
 ```javascript
+/**
+ * @param num 要处理的数字
+ * @param digits 保留几位小数
+ * @param isIntegerSet 整数是否处理小数逻辑
+ */
+
 import { toCurrency } from 'lib-agile'
 
 toCurrency(10000) // => 100,00
 
+toCurrency(10000, 1, true) // => 100,00.0
+
 toCurrency(10000.89) // => 100,00.89
+
+toCurrency(10000.893, 2) // => 100,00.89
 ```
 
 ## 数字差值
