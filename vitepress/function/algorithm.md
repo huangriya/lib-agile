@@ -14,11 +14,12 @@ const arr = [
     name: 'a',
     children: [
       {
-        id: 21
+        id: 21,
         name: 'aa',
       },
     ],
-  },{
+  },
+  {
     id: 101,
     name: 'b',
     children: [
@@ -38,7 +39,45 @@ depthForEach(arr, (item, parentItem, level) => {
 // aa
 // b
 // ba
+```
 
+## 深度遍历并返回符合条件的第一项数据
+
+深度遍历树形结构数据，直至满足条件为止并返回
+
+```javascript
+import { depthFind } from 'lib-agile'
+
+// 示例数据
+const arr = [
+  {
+    id: 1,
+    name: 'a',
+    children: [
+      {
+        id: 21,
+        name: 'aa',
+      },
+    ],
+  },
+  {
+    id: 101,
+    name: 'b',
+    children: [
+      {
+        id: 102,
+        name: 'ba',
+      },
+    ],
+  },
+]
+
+const find = depthFind(arr, () => item.id === 21)
+// =>
+// {
+//   id: 21,
+//   name: 'aa',
+//  }
 ```
 
 ## 广度遍历
