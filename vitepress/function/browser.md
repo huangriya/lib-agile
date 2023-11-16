@@ -29,6 +29,13 @@ scheduling.clear()
 执行耗时任务，最大限度的不阻塞浏览器渲染
 
 ```javascript
+/**
+ * 执行一个耗时任务，尽量让浏览器渲染不产生卡顿
+ * @param task 需要执行的任务函数
+ * @param timeRemaining 距离下次浏览器渲染还剩多少毫秒之前执行, 这个数字在0 - 10之内，该参数不兼容Safari
+ * @returns Promise
+ */
+
 import { runTask } from 'lib-agile'
 
 for (let i = 0; i <= 10000; i++) {

@@ -62,7 +62,51 @@ import{_ as s,o as n,c as a,R as l}from"./chunks/framework.b4504927.js";const i=
 <span class="line"><span style="color:#676E95;font-style:italic;">// {</span></span>
 <span class="line"><span style="color:#676E95;font-style:italic;">//   id: 21,</span></span>
 <span class="line"><span style="color:#676E95;font-style:italic;">//   name: &#39;aa&#39;,</span></span>
-<span class="line"><span style="color:#676E95;font-style:italic;">//  }</span></span></code></pre></div><h2 id="广度遍历" tabindex="-1">广度遍历 <a class="header-anchor" href="#广度遍历" aria-label="Permalink to &quot;广度遍历&quot;">​</a></h2><p>广度遍历树形结构每一项数据</p><div class="language-javascript"><button title="Copy Code" class="copy"></button><span class="lang">javascript</span><pre class="shiki material-theme-palenight"><code><span class="line"><span style="color:#89DDFF;font-style:italic;">import</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">{</span><span style="color:#F07178;"> </span><span style="color:#A6ACCD;">breadthForEach</span><span style="color:#F07178;"> </span><span style="color:#89DDFF;">}</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;font-style:italic;">from</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">&#39;</span><span style="color:#C3E88D;">lib-agile</span><span style="color:#89DDFF;">&#39;</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;">//  }</span></span></code></pre></div><h2 id="深度遍历树形结构数据并过滤掉满足条件的具体项" tabindex="-1">深度遍历树形结构数据并过滤掉满足条件的具体项 <a class="header-anchor" href="#深度遍历树形结构数据并过滤掉满足条件的具体项" aria-label="Permalink to &quot;深度遍历树形结构数据并过滤掉满足条件的具体项&quot;">​</a></h2><div class="language-javascript"><button title="Copy Code" class="copy"></button><span class="lang">javascript</span><pre class="shiki material-theme-palenight"><code><span class="line"><span style="color:#89DDFF;font-style:italic;">import</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">{</span><span style="color:#F07178;"> </span><span style="color:#A6ACCD;">depthExclude</span><span style="color:#F07178;"> </span><span style="color:#89DDFF;">}</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;font-style:italic;">from</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">&#39;</span><span style="color:#C3E88D;">lib-agile</span><span style="color:#89DDFF;">&#39;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#676E95;font-style:italic;">// 示例数据</span></span>
+<span class="line"><span style="color:#C792EA;">const</span><span style="color:#A6ACCD;"> arr </span><span style="color:#89DDFF;">=</span><span style="color:#A6ACCD;"> [</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#89DDFF;">{</span></span>
+<span class="line"><span style="color:#A6ACCD;">    </span><span style="color:#F07178;">id</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#F78C6C;">1</span><span style="color:#89DDFF;">,</span></span>
+<span class="line"><span style="color:#A6ACCD;">    </span><span style="color:#F07178;">name</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">&#39;</span><span style="color:#C3E88D;">a</span><span style="color:#89DDFF;">&#39;</span><span style="color:#89DDFF;">,</span></span>
+<span class="line"><span style="color:#A6ACCD;">    </span><span style="color:#F07178;">children</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> [</span></span>
+<span class="line"><span style="color:#A6ACCD;">      </span><span style="color:#89DDFF;">{</span></span>
+<span class="line"><span style="color:#A6ACCD;">        </span><span style="color:#F07178;">id</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#F78C6C;">21</span><span style="color:#89DDFF;">,</span></span>
+<span class="line"><span style="color:#A6ACCD;">        </span><span style="color:#F07178;">name</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">&#39;</span><span style="color:#C3E88D;">aa</span><span style="color:#89DDFF;">&#39;</span><span style="color:#89DDFF;">,</span></span>
+<span class="line"><span style="color:#A6ACCD;">      </span><span style="color:#89DDFF;">},</span></span>
+<span class="line"><span style="color:#A6ACCD;">    ]</span><span style="color:#89DDFF;">,</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#89DDFF;">},</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#89DDFF;">{</span></span>
+<span class="line"><span style="color:#A6ACCD;">    </span><span style="color:#F07178;">id</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#F78C6C;">101</span><span style="color:#89DDFF;">,</span></span>
+<span class="line"><span style="color:#A6ACCD;">    </span><span style="color:#F07178;">name</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">&#39;</span><span style="color:#C3E88D;">b</span><span style="color:#89DDFF;">&#39;</span><span style="color:#89DDFF;">,</span></span>
+<span class="line"><span style="color:#A6ACCD;">    </span><span style="color:#F07178;">children</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> [</span></span>
+<span class="line"><span style="color:#A6ACCD;">      </span><span style="color:#89DDFF;">{</span></span>
+<span class="line"><span style="color:#A6ACCD;">        </span><span style="color:#F07178;">id</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#F78C6C;">102</span><span style="color:#89DDFF;">,</span></span>
+<span class="line"><span style="color:#A6ACCD;">        </span><span style="color:#F07178;">name</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">&#39;</span><span style="color:#C3E88D;">ba</span><span style="color:#89DDFF;">&#39;</span><span style="color:#89DDFF;">,</span></span>
+<span class="line"><span style="color:#A6ACCD;">      </span><span style="color:#89DDFF;">},</span></span>
+<span class="line"><span style="color:#A6ACCD;">    ]</span><span style="color:#89DDFF;">,</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#89DDFF;">},</span></span>
+<span class="line"><span style="color:#A6ACCD;">]</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C792EA;">const</span><span style="color:#A6ACCD;"> find </span><span style="color:#89DDFF;">=</span><span style="color:#A6ACCD;"> </span><span style="color:#82AAFF;">depthExclude</span><span style="color:#A6ACCD;">(arr</span><span style="color:#89DDFF;">,</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">()</span><span style="color:#A6ACCD;"> </span><span style="color:#C792EA;">=&gt;</span><span style="color:#A6ACCD;"> item</span><span style="color:#89DDFF;">.</span><span style="color:#A6ACCD;">id </span><span style="color:#89DDFF;">===</span><span style="color:#A6ACCD;"> </span><span style="color:#F78C6C;">21</span><span style="color:#A6ACCD;">)</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;">// =&gt;</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;">// [</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;">//   {</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;">//     id: 1,</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;">//     name: &#39;a&#39;,</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;">//     children: [],</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;">//   },</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;">//   {</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;">//     id: 101,</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;">//     name: &#39;b&#39;,</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;">//     children: [</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;">//       {</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;">//         id: 102,</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;">//         name: &#39;ba&#39;,</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;">//       },</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;">//     ],</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;">//   },</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;">// ]</span></span></code></pre></div><h2 id="广度遍历" tabindex="-1">广度遍历 <a class="header-anchor" href="#广度遍历" aria-label="Permalink to &quot;广度遍历&quot;">​</a></h2><p>广度遍历树形结构每一项数据</p><div class="language-javascript"><button title="Copy Code" class="copy"></button><span class="lang">javascript</span><pre class="shiki material-theme-palenight"><code><span class="line"><span style="color:#89DDFF;font-style:italic;">import</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">{</span><span style="color:#F07178;"> </span><span style="color:#A6ACCD;">breadthForEach</span><span style="color:#F07178;"> </span><span style="color:#89DDFF;">}</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;font-style:italic;">from</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">&#39;</span><span style="color:#C3E88D;">lib-agile</span><span style="color:#89DDFF;">&#39;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#676E95;font-style:italic;">// 示例数据</span></span>
 <span class="line"><span style="color:#C792EA;">const</span><span style="color:#A6ACCD;"> arr </span><span style="color:#89DDFF;">=</span><span style="color:#A6ACCD;"> [</span></span>
@@ -153,4 +197,4 @@ import{_ as s,o as n,c as a,R as l}from"./chunks/framework.b4504927.js";const i=
 <span class="line"><span style="color:#A6ACCD;">]</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#82AAFF;">shuffle</span><span style="color:#A6ACCD;">(arr) </span><span style="color:#676E95;font-style:italic;">// 随机排列该数组</span></span>
-<span class="line"><span style="color:#A6ACCD;">console</span><span style="color:#89DDFF;">.</span><span style="color:#82AAFF;">log</span><span style="color:#A6ACCD;">(arr)</span></span></code></pre></div>`,19),e=[o];function c(t,r,D,y,F,C){return n(),a("div",null,e)}const d=s(p,[["render",c]]);export{i as __pageData,d as default};
+<span class="line"><span style="color:#A6ACCD;">console</span><span style="color:#89DDFF;">.</span><span style="color:#82AAFF;">log</span><span style="color:#A6ACCD;">(arr)</span></span></code></pre></div>`,21),e=[o];function c(t,r,D,y,F,C){return n(),a("div",null,e)}const d=s(p,[["render",c]]);export{i as __pageData,d as default};

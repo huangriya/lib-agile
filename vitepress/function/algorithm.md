@@ -80,6 +80,56 @@ const find = depthFind(arr, () => item.id === 21)
 //  }
 ```
 
+## 深度遍历树形结构数据并过滤掉满足条件的具体项
+
+```javascript
+import { depthExclude } from 'lib-agile'
+
+// 示例数据
+const arr = [
+  {
+    id: 1,
+    name: 'a',
+    children: [
+      {
+        id: 21,
+        name: 'aa',
+      },
+    ],
+  },
+  {
+    id: 101,
+    name: 'b',
+    children: [
+      {
+        id: 102,
+        name: 'ba',
+      },
+    ],
+  },
+]
+
+const find = depthExclude(arr, () => item.id === 21)
+// =>
+// [
+//   {
+//     id: 1,
+//     name: 'a',
+//     children: [],
+//   },
+//   {
+//     id: 101,
+//     name: 'b',
+//     children: [
+//       {
+//         id: 102,
+//         name: 'ba',
+//       },
+//     ],
+//   },
+// ]
+```
+
 ## 广度遍历
 
 广度遍历树形结构每一项数据
