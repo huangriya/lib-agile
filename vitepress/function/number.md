@@ -66,6 +66,27 @@ toCurrency(0.22, {
 }) // => 22.00%
 ```
 
+## 数字比率
+
+计算两个数字之间的比率
+
+```javascript
+/**
+ * @param num 数字本身
+ * @param comparNum 要对比的数字
+ * @param option.digits 保留几位小数
+ * @param option.errorText 对比异常是显示的文本 -
+ */
+
+import { toRatio } from 'lib-agile'
+
+toRatio(10, 8) // => 0.25
+
+toRatio(10, 20) // => -0.5
+
+toRatio(10, 0) // => -
+```
+
 ## 数字差值
 
 计算两个数的差值

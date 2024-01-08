@@ -2,12 +2,20 @@
 
 自定义滚动条样式的滚动容器，基于浏览器原生滚动实现，既保留了原生滚动的性能，又具备自定义样式能力，使用起来更是比写 div 还方便。
 
+## 按需引入
+
+```vue {4}
+<script setup>
+import scrollBar from 'lib-agile/es/components/scrollBar/index.vue.js'
+import 'lib-agile/es/components/scrollBar/index.css'
+</script>
+```
+
 ## 基本使用
 
 当内容超过容器宽高时会自动出现对应滚动条
 
 <script setup>
-  // 这个 demo1 重复了多次，复制修改的时候容易漏掉
   import scrollBar from '../../../src/components/scrollBar/index.vue'
 </script>
 
@@ -24,11 +32,6 @@
     <div style="width: 1500px;height: 400px;padding:10px">占位内容</div>
   </scrollBar>
 </template>
-
-<script setup>
-  import scrollBar from 'lib-agile/es/components/scrollBar/index.vue.js'
-  import 'lib-agile/es/components/scrollBar/index.css'
-</script>
 ```
 
 </details>
@@ -50,11 +53,6 @@
     <div style="width: 1500px;padding:10px">占位内容</div>
   </scrollBar>
 </template>
-
-<script setup>
-  import scrollBar from 'lib-agile/es/components/scrollBar/index.vue.js'
-  import 'lib-agile/es/components/scrollBar/index.css'
-</script>
 ```
 
 </details>
@@ -81,10 +79,7 @@
   </scrollBar>
 </template>
 
-<script setup>
-  import scrollBar from 'lib-agile/es/components/scrollBar/index.vue.js'
-  import 'lib-agile/es/components/scrollBar/index.css'
-</script>
+
 ```
 
 </details>

@@ -68,6 +68,10 @@ export default defineConfig({
           text: '颜色选择器',
           link: '/components/vue/colorPicker',
         },
+        {
+          text: '文本工具提示',
+          link: '/components/vue/tooltip',
+        },
       ],
       '/components/react': [
         { text: '滚动条', link: '/components/react/scrollBar' },
