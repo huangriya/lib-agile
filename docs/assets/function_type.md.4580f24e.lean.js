@@ -1,0 +1,1 @@
+import{_ as s,o as a,c as n,R as l}from"./chunks/framework.7c2c4810.js";const F=JSON.parse('{"title":"类型判断","description":"","frontmatter":{},"headers":[],"relativePath":"function/type.md","filePath":"function/type.md"}'),o={name:"function/type.md"},p=l("",8),e=[p];function t(c,r,i,y,D,C){return a(),n("div",null,e)}const d=s(o,[["render",t]]);export{F as __pageData,d as default};
