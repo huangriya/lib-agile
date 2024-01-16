@@ -54,6 +54,22 @@ import { getElementAttr } from 'lib-agile'
 addElement(document.getElementById('demo'), 'data-name') // => name
 ```
 
+## 获取元素xPath
+
+```javascript
+import { getElementXpath } from 'lib-agile'
+
+getElementXpath(document.getElementById('demo')) // => /html/body/div[1]/div
+```
+
+## 解析元素xPath
+
+```javascript
+import { useElementXpath } from 'lib-agile'
+
+useElementXpath('/html/body/div[1]/div') // => [HTMLElement]
+```
+
 ## html 标签转换成安全字符
 
 ```javascript

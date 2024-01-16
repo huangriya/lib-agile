@@ -20,8 +20,10 @@ export default defineConfig({
       libBuild: {
         buildOptions: {
           rollupOptions: {
-            external: ['vue', 'react'],
-            output: { globals: { vue: 'Vue', react: 'React' } },
+            external: ['vue', 'react', 'echarts'],
+            output: {
+              globals: { vue: 'Vue', react: 'React', echarts: 'echarts' },
+            },
           },
           lib: {
             entry: path.resolve(__dirname, 'src/index.ts'),
@@ -32,7 +34,7 @@ export default defineConfig({
     }),
   ],
   resolve: {
-    dedupe: ['vue', 'react'],
+    dedupe: ['vue', 'react', 'echarts'],
     alias: {
       '@': path.join(__dirname, './src'),
     },

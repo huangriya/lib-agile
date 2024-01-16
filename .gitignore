@@ -8,3 +8,6 @@ es
 src
 example
 dist
+
+.eslintcache
+.pnpm-debug.log
