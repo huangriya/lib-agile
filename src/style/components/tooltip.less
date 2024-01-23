@@ -1,0 +1,33 @@
+.lib-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lib-ellipsis-2,
+.lib-ellipsis-3,
+.lib-ellipsis-4 {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.lib-ellipsis-3 {
+  -webkit-line-clamp: 3;
+}
+.lib-ellipsis-4 {
+  -webkit-line-clamp: 4;
+}
+
+#lib-ellipsis-tooltip {
+  position: fixed;
+  box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.39);
+  max-width: 300px;
+  padding: 10px;
+  border-radius: 4px;
+  z-index: 10000;
+  background-color: #fff;
+  visibility: hidden;
+}

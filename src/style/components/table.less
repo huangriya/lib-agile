@@ -1,0 +1,107 @@
+.lib-table {
+  .lib-table-hd {
+    border-bottom: solid 1px #ddd;
+    position: static;
+    top: 0;
+    &.sticky {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+  }
+  .lib-table-bd {
+    height: 100%;
+    > div {
+      height: 100%;
+    }
+    .left-boundary,
+    .right-boundary {
+      position: absolute;
+      top: 0;
+      width: 1px;
+      height: 100%;
+      background-color: #ddd;
+    }
+    .left-boundary {
+      left: 0;
+    }
+    .right-boundary {
+      right: 0;
+    }
+  }
+  .lib-table-ft {
+  }
+  .lib-table-hd table,
+  .lib-table-bd table {
+    text-align: left;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 0;
+    td {
+      // border: solid #ddd 1px;
+      background-color: #fff;
+      height: 40px;
+    }
+
+    .lib-table-column {
+      &.sticky {
+        position: sticky !important;
+        z-index: 1;
+      }
+
+      &.sticky-left,
+      &.sticky-right {
+        &::after {
+          content: '';
+          opacity: 0;
+          width: 5px;
+          transition: opacity 0.3s ease;
+          position: absolute;
+          top: 0;
+        }
+      }
+
+      &.sticky-left {
+        &::after {
+          opacity: 1;
+          bottom: 0px;
+          right: -5px;
+          box-shadow: inset 8px 0 8px -8px rgba(0, 0, 0, 0.15);
+        }
+      }
+
+      &.sticky-right {
+        &::after {
+          opacity: 1;
+          bottom: -1px;
+          left: -5px;
+          box-shadow: inset -8px 0 8px -8px rgb(0 0 0 / 14%);
+        }
+      }
+
+      .lib-table-column-box {
+        height: 100%;
+        display: flex;
+        padding: 0 22px 0 10px;
+        align-items: center;
+
+        .lib-table-column-content {
+          flex: auto;
+          &.ellipsis,
+          .ellipsis {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+          &.align-center {
+            text-align: center;
+          }
+          &.align-right {
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}

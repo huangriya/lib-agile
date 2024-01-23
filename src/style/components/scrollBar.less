@@ -1,0 +1,86 @@
+.agile-scrollbar {
+  position: relative;
+
+  &.not-user-select {
+    user-select: none;
+  }
+  &.scrollbar-hide {
+    .agile-scroll-bar-x,
+    .agile-scroll-bar-y {
+      display: none;
+    }
+  }
+  &.scrollbar-hover {
+    .agile-scroll-bar-x,
+    .agile-scroll-bar-y {
+      opacity: 0;
+    }
+    &:hover {
+      .agile-scroll-bar-x,
+      .agile-scroll-bar-y {
+        opacity: 1;
+      }
+    }
+  }
+
+  .agile-scroll {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    position: relative;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &.scroll-x {
+      overflow-x: auto;
+    }
+    &.scroll-y {
+      overflow-y: auto;
+    }
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .agile-scroll-wrapper {
+      float: left;
+      min-width: 100%;
+    }
+  }
+
+  .agile-scroll-bar-x,
+  .agile-scroll-bar-y {
+    position: absolute;
+    background-color: #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 10;
+    &.act {
+      opacity: 1;
+    }
+    &:hover,
+    &.act {
+      background-color: #bbb;
+    }
+  }
+  .agile-scroll-bar-x {
+    bottom: 0;
+    width: 100px;
+    left: 0;
+    height: 6px;
+    transition: height 0.3s, background-color 0.5s, opacity 0.3s;
+    &:hover,
+    &.act {
+      height: 10px;
+    }
+  }
+  .agile-scroll-bar-y {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 6px;
+    height: 100px;
+    transition: width 0.3s, background-color 0.5s, opacity 0.3s;
+    &:hover,
+    &.act {
+      width: 10px;
+    }
+  }
+}

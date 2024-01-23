@@ -31,3 +31,31 @@ isPromise(5) // => false
 
 isPromise(new Promise(() => {})) // => true
 ```
+
+## 是否是HTMLElement
+
+```javascript
+import { isElement } from 'lib-agile'
+
+isElement(5) // => false
+
+isElement(document.body) // => true
+```
+
+## 是否是SVGElement
+
+```javascript
+import { isSvg } from 'lib-agile'
+
+isSvg(5) // => false
+
+isElement(document.body) // => false
+```
+
+## 是否是参数列
+
+```javascript
+import { isArgs } from 'lib-agile'
+
+isArgs(5) // => false
+```

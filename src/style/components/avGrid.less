@@ -1,0 +1,17 @@
+.lib-av-grid {
+  display: grid;
+  position: relative;
+  &.align-start {
+    align-items: start;
+  }
+  &.align-end {
+    align-items: end;
+  }
+  &.align-center {
+    align-items: center;
+  }
+
+  > * {
+    min-width: 0;
+  }
+}

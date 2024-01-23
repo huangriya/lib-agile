@@ -5,7 +5,7 @@ dist-ssr
 yarn.lock
 lib
 es
-src
+
 example
 dist
 
