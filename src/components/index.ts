@@ -3,6 +3,7 @@ import ScrollBar from './scrollBar/index.vue'
 import Column from './column/index.vue'
 import AvGrid from './avGrid/index.vue'
 import ColorPicker from './colorPicker/index.vue'
+import Proportional from './proportional/index.vue'
 import Tooltip from './tooltip'
 
 import '../style/components/index.less'
@@ -30,6 +31,7 @@ const _default: Install = {
     app.component(Column.name, Column)
     app.component(AvGrid.name, AvGrid)
     app.component(ColorPicker.name, ColorPicker)
+    app.component(Proportional.name, Proportional)
     if (config.tooltip?.show) {
       Tooltip(config.tooltip)
     }

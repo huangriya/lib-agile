@@ -78,20 +78,27 @@ export const getElementAttr = (el: HTMLElement, attrName: string) => {
  * @param el 节点
  * @param option.full 从根节点html开始
  * @param option.mode 生成模式 默认宽松模式
+ * @param option.endTag 结束标签，向上遍历时遇到该标签以它作为结尾
  */
 export const getElementXpath = (
   el: HTMLElement,
   option?: {
-    full: boolean
-    mode: 'loose' | 'ordinary' | 'strict'
+    full?: boolean
+    mode?: 'loose' | 'ordinary' | 'strict'
+    endTag?: any[]
   },
 ) => {
-  const opt = Object.assign({ full: false, mode: 'loose' }, option)
-  let path: any = ''
+  const opt = Object.assign({ full: false, mode: 'loose', endTag: [] }, option)
+  let path: string = ''
   elementFind(el, (o) => {
     const id = o.id
     const tagName = o.tagName.toLowerCase()
     let str = ''
+
+    if (opt.endTag.indexOf(tagName) > -1) {
+      path = ''
+    }
+
     if (isElement(o)) {
       if (id && !opt.full) {
         str = `//${tagName}[@id="${id}"]`
@@ -133,6 +140,7 @@ export const getElementXpath = (
     }
     if (!opt.full && id) return true
   })
+
   return path
 }
 

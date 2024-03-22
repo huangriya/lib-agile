@@ -5,8 +5,7 @@ export default defineConfig({
   base: '/lib-agile',
   outDir: '../docs',
   title: 'libAgile',
-  description:
-    '简单方便快捷的综合库，包含工具函数、组件、样式，与第三方组件库形式优势互补。',
+  description: '简单方便快捷的综合库，包含工具函数、组件、样式，与第三方组件库形式优势互补。',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -65,6 +64,10 @@ export default defineConfig({
           link: '/components/vue/column',
         },
         {
+          text: '等比例缩放容器',
+          link: '/components/vue/proportional',
+        },
+        {
           text: '颜色选择器',
           link: '/components/vue/colorPicker',
         },
@@ -75,11 +78,13 @@ export default defineConfig({
       ],
       '/components/react': [
         { text: '滚动条', link: '/components/react/scrollBar' },
+        {
+          text: '等比例缩放容器',
+          link: '/components/react/proportional',
+        },
       ],
     },
 
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/huangriya/lib-agile' },
-    ],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/huangriya/lib-agile' }],
   },
 })

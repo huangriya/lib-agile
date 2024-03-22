@@ -1,5 +1,8 @@
 <template>
-  <div class="lib-column" :class="[alignClass, { 'lib-column-row': props.vertical }]">
+  <div
+    class="lib-column"
+    :class="[alignClass, { 'lib-column-row': props.vertical }]"
+    :style="{ '--lib-column-gap': `${gap}px` }">
     <slot name="start" />
 
     <div class="lib-column-middle">
@@ -22,6 +25,10 @@ const props = defineProps({
   // 垂直排列
   vertical: {
     type: Boolean,
+  },
+
+  gap: {
+    type: Number,
   },
 })
 

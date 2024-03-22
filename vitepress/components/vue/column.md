@@ -42,3 +42,4 @@
 | -------- | ------------------------------------ | ------- | ------ |
 | align    | 对齐方式。可选值为：start center end | string  | start  |
 | vertical | 垂直排列                             | Boolean | false  |
+| gap      | 间距                                 | Number  | -      |

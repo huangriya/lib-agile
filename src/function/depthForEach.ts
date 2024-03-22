@@ -1,41 +1,64 @@
+import { isArray } from './type'
+
 /**
  * 树形结构数据深度遍历
  * @param arr
  * @param fn
  */
 
+type TreeItem = { [key: string]: any }
+
+type Tree = TreeItem[] | TreeItem
+
 export const depthForEach = (
-  arr: any[],
-  fn: (item: any, parentItem: any, level: number) => void | boolean,
+  tree: Tree,
+  fn: (item: TreeItem, parentItem: TreeItem, level: number) => void | boolean,
   option?: {
     isFind?: boolean
   },
 ) => {
-  let level = 0
-  let parent: any[] | null = null
-  function depth(arr: any[]): any {
-    for (let i = 0; i < arr.length; i++) {
-      const o = arr[i]
-      const fnExecute = fn(o, parent, level)
-      if (option && option.isFind && fnExecute) {
-        return o
-      }
-      if (o.children && o.children.length) {
-        level++
-        parent = o
-        const find = depth(o.children)
+  const parentMap = new WeakMap()
+
+  function add(o: TreeItem) {
+    parentMap.set(o, {
+      level: 0,
+      parent: null,
+    })
+  }
+
+  function depth(o: TreeItem): any {
+    const { parent, level } = parentMap.get(o)
+
+    const fnExecute = fn(o, parent, level)
+
+    if (option && option.isFind && fnExecute) {
+      return o
+    }
+
+    const children = o.children
+    if (children && children.length) {
+      for (let i = 0; i < children.length; i++) {
+        const item = children[i]
+        parentMap.set(item, {
+          level: level + 1,
+          parent: o,
+        })
+        const find = depth(item)
         if (option && option.isFind && find) {
           return find
-        }
-      } else {
-        if (i === arr.length - 1) {
-          level = 0
-          parent = null
         }
       }
     }
   }
-  return depth(arr)
+
+  const arr: Tree = isArray(tree) ? tree : [tree]
+
+  for (let i = 0; i < arr.length; i++) {
+    const o: TreeItem = arr[i]
+    add(o)
+    const find = depth(o)
+    if (option && option.isFind && find) return find
+  }
 }
 
 /**
