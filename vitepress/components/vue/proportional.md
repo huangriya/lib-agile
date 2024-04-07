@@ -1,5 +1,9 @@
 <script setup>
+  import { defineAsyncComponent, ref, nextTick } from 'vue'
   import proportional from '../../../src/components/proportional/index.vue'
+
+  const value = ref(0.5)
+
 </script>
 
 # 等比例缩放容器
@@ -8,8 +12,10 @@
 
 ## 基本使用
 
-<proportional :value=".50">
-高度按宽度50%缩放
+<input type="radio" name="v" v-model="value" :value="0.2" />20% <input type="radio" name="v" v-model="value" :value="0.5" />50% <input type="radio" name="v" v-model="value" :value="0.7" />70%
+
+<proportional :value="value">
+高度按宽度{{value * 100}}%缩放
 </proportional>
 
 <details>
@@ -17,7 +23,7 @@
 
 ```vue{4}
 <template>
-  <proportional :value=".50"></proportional>
+  <proportional :value="0.5"></proportional>
 </template>
 ```
 

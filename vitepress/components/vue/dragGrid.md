@@ -48,4 +48,28 @@
 
 ## api
 
-### props
+### dragGrid props
+
+| 参数          | 说明               | 类型    | 默认值 |
+| ------------- | ------------------ | ------- | ------ |
+| cellHeight    | 一栏单元格高度     | Number  | 50     |
+| float         |                    | boolean | false  |
+| handleClass   | 设置拖拽抓手       | string  |        |
+| disableDrag   | 禁止拖拽           | boolean | false  |
+| disableResize | 禁止改变单元格大小 | boolean | false  |
+
+### dragGridItem props
+
+| 参数     | 说明               | 类型    | 默认值 |
+| -------- | ------------------ | ------- | ------ |
+| x        | 位置               | Number  | -      |
+| y        | 位置               | Number  | -      |
+| w        | 宽度 1 - 12之间    | Number  | 2      |
+| h        | 高度               | boolean | 2      |
+| minW     | 最小宽度           | boolean | -      |
+| minH     | 最小高度           | boolean | -      |
+| maxW     | 最大宽度           | boolean | -      |
+| maxH     | 最大高度           | boolean | -      |
+| noResize | 禁止改变单元格大小 | boolean | false  |
+| noMove   | 禁止拖动           | boolean | false  |
+| locked   | 锁住单元格         | boolean | false  |
