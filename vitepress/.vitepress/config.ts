@@ -89,6 +89,10 @@ export default defineConfig({
       ],
     },
 
+    outline: {
+      label: '页面导航',
+    },
+
     socialLinks: [{ icon: 'github', link: 'https://github.com/huangriya/lib-agile' }],
   },
 })
