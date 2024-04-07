@@ -64,6 +64,10 @@ export default defineConfig({
           link: '/components/vue/column',
         },
         {
+          text: '拖拽网格',
+          link: '/components/vue/dragGrid',
+        },
+        {
           text: '等比例缩放容器',
           link: '/components/vue/proportional',
         },

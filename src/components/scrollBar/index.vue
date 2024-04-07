@@ -6,8 +6,7 @@
       'not-user-select': state.scrollBarX.clientX || state.scrollBarY.clientY,
       'scrollbar-hover': props.type === 'hover',
       'scrollbar-hide': props.type === 'hide',
-    }"
-  >
+    }">
     <div
       ref="scroll"
       class="agile-scroll"
@@ -15,26 +14,21 @@
         'scroll-x': state.scrollContentWidth > state.scrollWidth,
         'scroll-y': state.scrollContentHeight > state.scrollHeight,
       }"
-      @scroll="onScroll"
-    >
-      <div ref="scrollContent" class="agile-scroll-wrapper">
-        <slot></slot>
-      </div>
+      @scroll="onScroll">
+      <slot></slot>
     </div>
     <div
       v-if="state.scrollContentWidth > state.scrollWidth"
       class="agile-scroll-bar-x"
       :class="{ act: state.scrollBarX.clientX }"
       :style="{ width: state.scrollBarX.width + 'px' }"
-      @mousedown="scrollBarDown($event, 'scrollBarX')"
-    ></div>
+      @mousedown="scrollBarDown($event, 'scrollBarX')"></div>
     <div
       v-if="state.scrollContentHeight > state.scrollHeight"
       class="agile-scroll-bar-y"
       :class="{ act: state.scrollBarY.clientY }"
       :style="{ height: state.scrollBarY.height + 'px' }"
-      @mousedown="scrollBarDown($event, 'scrollBarY')"
-    ></div>
+      @mousedown="scrollBarDown($event, 'scrollBarY')"></div>
   </div>
 </template>
 
@@ -80,14 +74,16 @@ let requestAnimationYId: any = null
 
 const scrollBox = ref()
 const scroll = ref()
-const scrollContent = ref()
 
 // 初始化容器信息
 const initContainer = () => {
+  // console.dir(scroll.value)
+  // console.log(scroll.value.offsetWidth, scroll.value.scrollWidth)
+
   state.scrollWidth = scroll.value.offsetWidth
   state.scrollHeight = scroll.value.offsetHeight
-  state.scrollContentWidth = scrollContent.value.offsetWidth
-  state.scrollContentHeight = scrollContent.value.offsetHeight
+  state.scrollContentWidth = scroll.value.scrollWidth
+  state.scrollContentHeight = scroll.value.scrollHeight
 }
 
 // 初始化scrollBar
@@ -216,8 +212,7 @@ function scrollBarDrag(e) {
   const clientY = state.scrollBarY.clientY
   if (clientX) {
     let dragX = e.clientX - clientX
-    scroll.value.scrollLeft =
-      state.scrollBarX.scrollLeft + dragX * (state.scrollBarX.multiple * props.dragSpeedX)
+    scroll.value.scrollLeft = state.scrollBarX.scrollLeft + dragX * (state.scrollBarX.multiple * props.dragSpeedX)
   }
   if (clientY) {
     let dragY = e.clientY - clientY
@@ -264,7 +259,7 @@ const autoUpdate = () => {
       updated()
     }, 200)
   })
-  observer.observe(scrollContent.value, {
+  observer.observe(scroll.value, {
     attributes: true,
     childList: true,
     subtree: true,

@@ -51,7 +51,7 @@ addElement(document.getElementById('demo'), {
 import { getElementAttr } from 'lib-agile'
 
 // 设置#demo样式
-addElement(document.getElementById('demo'), 'data-name') // => name
+getElementAttr(document.getElementById('demo'), 'data-name') // => name
 ```
 
 ## 获取元素xPath

@@ -39,10 +39,6 @@
     &::-webkit-scrollbar {
       display: none;
     }
-    .agile-scroll-wrapper {
-      float: left;
-      min-width: 100%;
-    }
   }
 
   .agile-scroll-bar-x,
@@ -65,7 +61,10 @@
     width: 100px;
     left: 0;
     height: 6px;
-    transition: height 0.3s, background-color 0.5s, opacity 0.3s;
+    transition:
+      height 0.3s,
+      background-color 0.5s,
+      opacity 0.3s;
     &:hover,
     &.act {
       height: 10px;
@@ -77,7 +76,10 @@
     top: 0;
     width: 6px;
     height: 100px;
-    transition: width 0.3s, background-color 0.5s, opacity 0.3s;
+    transition:
+      width 0.3s,
+      background-color 0.5s,
+      opacity 0.3s;
     &:hover,
     &.act {
       width: 10px;

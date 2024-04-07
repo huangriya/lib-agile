@@ -14,7 +14,6 @@ const ScrollBar = forwardRef(function ScrollBar(props, ref) {
 
   const scrollBox = useRef(null)
   const scroll = useRef(null)
-  const scrollContent = useRef(null)
 
   // 滚动容器大小信息
   const [scrollSize, setScrollSize] = useState({
@@ -46,8 +45,8 @@ const ScrollBar = forwardRef(function ScrollBar(props, ref) {
     setScrollSize({
       scrollWidth: scroll.current.offsetWidth,
       scrollHeight: scroll.current.offsetHeight,
-      scrollContentWidth: scrollContent.current.offsetWidth,
-      scrollContentHeight: scrollContent.current.offsetHeight,
+      scrollContentWidth: scroll.current.scrollWidth,
+      scrollContentHeight: scroll.current.scrollHeight,
     })
   }
 
@@ -216,8 +215,7 @@ const ScrollBar = forwardRef(function ScrollBar(props, ref) {
         type === 'hover' ? 'scrollbar-hover' : '',
         type === 'hide' ? 'scrollbar-hide' : '',
       ].join(' ')}
-      style={props.style}
-    >
+      style={props.style}>
       <div
         className={[
           'agile-scroll',
@@ -225,25 +223,20 @@ const ScrollBar = forwardRef(function ScrollBar(props, ref) {
           scrollSize.scrollContentHeight > scrollSize.scrollHeight ? 'scroll-y' : '',
         ].join(' ')}
         ref={scroll}
-        onScroll={onScroll}
-      >
-        <div className="agile-scroll-wrapper" ref={scrollContent}>
-          {children}
-        </div>
+        onScroll={onScroll}>
+        {children}
       </div>
       {scrollSize.scrollContentWidth > scrollSize.scrollWidth && (
         <div
           className={['agile-scroll-bar-x', clientX ? 'act' : ''].join(' ')}
           style={{ width: scrollBarX.width + 'px' }}
-          onMouseDown={(e) => scrollBarDown(e, 'scrollBarX')}
-        ></div>
+          onMouseDown={(e) => scrollBarDown(e, 'scrollBarX')}></div>
       )}
       {scrollSize.scrollContentHeight > scrollSize.scrollHeight && (
         <div
           className={['agile-scroll-bar-y', clientY ? 'act' : ''].join(' ')}
           style={{ height: scrollBarY.height + 'px' }}
-          onMouseDown={(e) => scrollBarDown(e, 'scrollBarY')}
-        ></div>
+          onMouseDown={(e) => scrollBarDown(e, 'scrollBarY')}></div>
       )}
     </div>
   )
