@@ -20,9 +20,9 @@ export default defineConfig({
       libBuild: {
         buildOptions: {
           rollupOptions: {
-            external: ['vue', 'react', 'echarts'],
+            external: ['vue', 'react', 'echarts', 'axios'],
             output: {
-              globals: { vue: 'Vue', react: 'React', echarts: 'echarts' },
+              globals: { vue: 'Vue', react: 'React', echarts: 'echarts', axios: 'axios' },
             },
           },
           lib: {
@@ -34,7 +34,7 @@ export default defineConfig({
     }),
   ],
   resolve: {
-    dedupe: ['vue', 'react', 'echarts'],
+    dedupe: ['vue', 'react', 'echarts', 'axios'],
     alias: {
       '@': path.join(__dirname, './src'),
     },

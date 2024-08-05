@@ -28,6 +28,8 @@ export * from './function/escapeHtml'
 export * from './function/randomIp'
 export * from './function/isOdd'
 export * from './function/runTask'
+export * from './function/fuli'
+export * from './function/stock'
 
 import Animation from './function/animation'
 import Deque from './function/deque'

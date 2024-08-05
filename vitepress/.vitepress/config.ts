@@ -79,6 +79,10 @@ export default defineConfig({
           text: '文本工具提示',
           link: '/components/vue/tooltip',
         },
+        {
+          text: 'html代码预览',
+          link: '/components/vue/htmlCodePreview',
+        },
       ],
       '/components/react': [
         { text: '滚动条', link: '/components/react/scrollBar' },
