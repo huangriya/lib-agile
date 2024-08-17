@@ -46,7 +46,7 @@ export const isUndefined = (val: any) => val === undefined
 // 判断是否为null || undefined || ''
 export const isEmpty = (val: any) => isNull(val) || isUndefined(val) || val === ''
 
-export const isElement = (val: any) => val instanceof HTMLElement
+export const isElement = (val: any) => val instanceof Node
 
 export const isHtmlCollection = (val: any) => val instanceof HTMLCollection
 

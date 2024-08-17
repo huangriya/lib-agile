@@ -55,14 +55,14 @@ export default defineConfig({
       ],
       '/components/vue': [
         { text: '滚动条', link: '/components/vue/scrollBar' },
-        {
-          text: '均分网格',
-          link: '/components/vue/avGrid',
-        },
-        {
-          text: '三栏布局',
-          link: '/components/vue/column',
-        },
+        // {
+        //   text: '均分网格',
+        //   link: '/components/vue/avGrid',
+        // },
+        // {
+        //   text: '三栏布局',
+        //   link: '/components/vue/column',
+        // },
         {
           text: '拖拽网格',
           link: '/components/vue/dragGrid',
@@ -82,6 +82,14 @@ export default defineConfig({
         {
           text: 'html代码预览',
           link: '/components/vue/htmlCodePreview',
+        },
+        {
+          text: '代码编辑器',
+          link: '/components/vue/codeEditor',
+        },
+        {
+          text: '前端代码运行器',
+          link: '/components/vue/htmlCodeRun',
         },
       ],
       '/components/react': [
